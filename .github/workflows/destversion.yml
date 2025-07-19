@@ -14,5 +14,5 @@ jobs:
       #   run: echo `date`
       - name: Check new version and push
         env: 
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: bash -x ./scripts/destVersionForMac.sh ${{ github.event.inputs.download_link }}
