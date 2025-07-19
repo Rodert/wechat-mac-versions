@@ -1,3 +1,11 @@
+为避免项目&数据被和谐，且用且珍惜。
+
+- [点击下载 windows 微信历史版本](https://github.com/Rodert/wechat-windows-versions)
+
+- [点击下载 mac 微信历史版本](https://github.com/Rodert/wechat-mac-versions)
+
+
+
 # Wechat-Versions-For-macOS
 收集 Mac 微信版本并保存
 
