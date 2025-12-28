@@ -12,6 +12,8 @@
 ## 目录结构
 ```shell
 ├── README.md # 自述文件
+├── index.html # GitHub Pages 展示页面
+├── .nojekyll # GitHub Pages 配置文件
 ├── WeChatSetup # 微信安装包临时目录
 │   └── temp # 临时目录
 └── scripts   # 脚本目录
@@ -23,7 +25,8 @@
 
 ## 如何下载历史安装包
 
-> 📖 详细使用说明请参考 [Wiki 页面](https://github.com/Rodert/wechat-mac-versions/wiki/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%8E%86%E5%8F%B2%E5%AE%89%E8%A3%85%E5%8C%85-instructions)
+> 📖 详细使用说明请参考 [Wiki 页面](https://github.com/Rodert/wechat-mac-versions/wiki/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%8E%86%E5%8F%B2%E5%AE%89%E8%A3%85%E5%8C%85-instructions)  
+> 🌐 **在线浏览 Releases**: [访问 GitHub Pages 页面](https://rodert.github.io/wechat-mac-versions/) 查看所有版本并直接下载
 
 本仓库通过 GitHub Releases 保存所有历史版本的微信安装包。按照以下步骤即可下载：
 
