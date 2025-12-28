@@ -67,13 +67,13 @@ function main() {
 
     release_info=`awk '!/^$|Sha256/ { $1="*"$1"*";sub("UpdateTime", "CheckTime"); if ( match($2, /https?:\/\/([\w\.\/:])*/) ) $2="[Url]("$2")"; print $0 }' ${temp_path}/release.info | join_lines '%0A' | sed 's/ /%20/g'`
     dest_version=`awk '/DestVersion/ { print $2 }' ${temp_path}/release.info`
-    release_info="$release_info%0A%0A*NotifyFrom:*%20[Github](https://github.com/tom-snow/wechat-windows-versions/releases/tag/v$dest_version)"
+    release_info="$release_info%0A%0A*NotifyFrom:*%20[Github](https://github.com/Rodert/wechat-mac-versions/releases/tag/v$dest_version)"
 
     echo $CHATIDS | sed 's/,/\n/g' > ${temp_path}/chat_ids
     # while IFS="" read -r chatid || [ -n "$chatid" ]
     while IFS="" read -r chatid
     do
-        api_link="https://api.telegram.org/bot$BOTTOKEN/sendMessage?chat_id=$chatid&text=*New%20WeChat%20Windows%20Version!!*%0A%0A$release_info&parse_mode=Markdown&disable_web_page_preview=true"
+        api_link="https://api.telegram.org/bot$BOTTOKEN/sendMessage?chat_id=$chatid&text=*New%20WeChat%20Mac%20Version!!*%0A%0A$release_info&parse_mode=Markdown&disable_web_page_preview=true"
         curl -s -o /dev/null $api_link
     done < ${temp_path}/chat_ids
 
