@@ -23,14 +23,21 @@
 
 ## 如何下载历史安装包
 
+> 📖 详细使用说明请参考 [Wiki 页面](https://github.com/Rodert/wechat-mac-versions/wiki/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%8E%86%E5%8F%B2%E5%AE%89%E8%A3%85%E5%8C%85-instructions)
+
+本仓库通过 GitHub Releases 保存所有历史版本的微信安装包。按照以下步骤即可下载：
+
 ### 使用说明
 
 1. 进入本仓库的 [Releases 页面](https://github.com/Rodert/wechat-mac-versions/releases)
-2. 在 Releases 列表中找到你需要的版本
-3. 下载对应的 `.dmg` 安装包文件
-4. 可以同时下载 `.sha256` 文件来验证安装包的完整性
+2. 在 Releases 列表中找到你需要的版本（按时间倒序排列，最新版本在顶部）
+3. 点击进入对应版本的 Release 页面
+4. 下载对应的 `.dmg` 安装包文件
+5. （可选）同时下载 `.sha256` 文件来验证安装包的完整性
 
 ### 操作演示
+
+下面的动图展示了完整的下载流程：
 
 ![如何下载历史安装包.gif](如何下载历史安装包.gif)
 
