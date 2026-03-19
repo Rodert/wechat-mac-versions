@@ -42,15 +42,28 @@ echo_color() {
 # 安装依赖项
 install_depends() {
     print_separator
-    echo_color "yellow" "Installing dependencies: wget, curl, git, gh, shasum, pup"
+    echo_color "yellow" "Installing dependencies: wget, curl, git, gh, shasum"
     print_separator
 
-    brew install wget curl git gh pup
+    brew install wget curl git gh
 }
 
 # 下载 WeChat DMG
 download_wechat() {
-    DOWNLOAD_LINK=$(curl -s "$WEBSITE_URL" | pup 'a.download-button:nth-of-type(1) attr{href}')
+    DOWNLOAD_LINK=$(curl -s "$WEBSITE_URL" \
+        | tr '\n' ' ' \
+        | sed -n 's/.*class="download-button"[^>]*href="\([^"]*\)".*/\1/p' \
+        | head -n1)
+
+    # 如果是相对路径，补全为绝对地址
+    if [[ "$DOWNLOAD_LINK" == /* ]]; then
+        DOWNLOAD_LINK="https://mac.weixin.qq.com$DOWNLOAD_LINK"
+    fi
+
+    if [ -z "$DOWNLOAD_LINK" ]; then
+        echo_color "red" "Failed to parse download link from $WEBSITE_URL"
+        clean_data 1
+    fi
     
     print_separator
     echo_color "yellow" "Downloading the newest WeChatMac..."
