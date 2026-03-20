@@ -6,7 +6,6 @@ set -eo pipefail
 # 配置变量
 # ====================================================
 TEMP_PATH="WeChatMac/temp"
-WEBSITE_URL="https://mac.weixin.qq.com/?t=mac&lang=zh_CN"
 DOWNLOAD_LINK=""
 
 # ====================================================
@@ -48,25 +47,12 @@ install_depends() {
     brew install wget curl git gh
 }
 
-# 下载 WeChat DMG
+# 下载 WeChat DMG（使用官方直链，避免依赖网页结构）
 download_wechat() {
-    DOWNLOAD_LINK=$(curl -s "$WEBSITE_URL" \
-        | tr '\n' ' ' \
-        | sed -n 's/.*class="download-button"[^>]*href="\([^"]*\)".*/\1/p' \
-        | head -n1)
+    DOWNLOAD_LINK="https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"
 
-    # 如果是相对路径，补全为绝对地址
-    if [[ "$DOWNLOAD_LINK" == /* ]]; then
-        DOWNLOAD_LINK="https://mac.weixin.qq.com$DOWNLOAD_LINK"
-    fi
-
-    if [ -z "$DOWNLOAD_LINK" ]; then
-        echo_color "red" "Failed to parse download link from $WEBSITE_URL"
-        clean_data 1
-    fi
-    
     print_separator
-    echo_color "yellow" "Downloading the newest WeChatMac..."
+    echo_color "yellow" "Downloading the newest WeChatMac from $DOWNLOAD_LINK..."
     print_separator
 
     mkdir -p "$TEMP_PATH"
