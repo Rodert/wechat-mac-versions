@@ -1,5 +1,15 @@
 为避免项目&数据被和谐，且用且珍惜。
 
+## 语言 / Languages
+
+- [简体中文](README.md)
+- [English](README.en.md)
+- [日本語](README.ja.md)
+- [Français](README.fr.md)
+- [Español](README.es.md)
+- [Русский](README.ru.md)
+- [한국어](README.ko.md)
+
 - [点击下载 windows 微信历史版本](https://github.com/Rodert/wechat-win-versions)
 
 - [点击下载 mac 微信历史版本](https://github.com/Rodert/wechat-mac-versions)
@@ -11,13 +21,19 @@
 
 ## 目录结构
 ```shell
-├── README.md # 自述文件
+├── README.md # 简体中文自述文件
+├── README.en.md # 英文自述文件
+├── README.ja.md # 日文自述文件
+├── README.fr.md # 法文自述文件
+├── README.es.md # 西班牙语自述文件
+├── README.ru.md # 俄文自述文件
+├── README.ko.md # 韩文自述文件
 ├── index.html # GitHub Pages 展示页面
 ├── .nojekyll # GitHub Pages 配置文件
 ├── WeChatSetup # 微信安装包临时目录
 │   └── temp # 临时目录
 └── scripts   # 脚本目录
-    └── destVersioForMac.sh # 获取安装包及取得版本号与 hash 值的脚本
+    └── destVersionForMac.sh # 获取安装包及取得版本号与 hash 值的脚本
 ```
 
 
