@@ -1,14 +1,6 @@
 为避免项目&数据被和谐，且用且珍惜。
 
-## 语言 / Languages
-
-- [简体中文](README.md)
-- [English](README.en.md)
-- [日本語](README.ja.md)
-- [Français](README.fr.md)
-- [Español](README.es.md)
-- [Русский](README.ru.md)
-- [한국어](README.ko.md)
+<sub>语言 / Languages: [简体中文](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Español](README.es.md) · [Русский](README.ru.md) · [한국어](README.ko.md)</sub>
 
 - [点击下载 windows 微信历史版本](https://github.com/Rodert/wechat-win-versions)
 

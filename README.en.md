@@ -1,6 +1,6 @@
 # Wechat-Versions-For-macOS
 
-[Simplified Chinese](README.md) | [English](README.en.md) | [日本語](README.ja.md) | [Français](README.fr.md) | [Español](README.es.md) | [Русский](README.ru.md) | [한국어](README.ko.md)
+<sub>Languages: [Simplified Chinese](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Español](README.es.md) · [Русский](README.ru.md) · [한국어](README.ko.md)</sub>
 
 Use this project and its data while they remain available.
 
