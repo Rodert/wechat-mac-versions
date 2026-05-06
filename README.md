@@ -6,7 +6,7 @@
 
 - [点击下载 mac 微信历史版本](https://github.com/Rodert/wechat-mac-versions)
 
-
+- [QQ历史版本](https://github.com/Rodert/qq-versions)
 
 # Wechat-Versions-For-macOS
 收集 Mac 微信版本并保存
