@@ -7,6 +7,9 @@ set -eo pipefail
 # ====================================================
 TEMP_PATH="WeChatMac/temp"
 DOWNLOAD_LINK=""
+WEIXIN_HOME_URL="https://weixin.qq.com/"
+RELEASE_FEED_URL="https://dldir1.qq.com/weixin/mac/mac-release.xml"
+DOWNLOAD_PAGE_URL="https://mac.weixin.qq.com/"
 
 # ====================================================
 # 函数定义
@@ -47,9 +50,58 @@ install_depends() {
     brew install wget curl git gh
 }
 
-# 下载 WeChat DMG（使用官方直链，避免依赖网页结构）
+# 从微信官网入口解析最新 WeChat DMG
+resolve_download_link() {
+    local home_content
+    local feed_content
+    local page_content
+    local mac_page_url
+
+    home_content=$(curl -fsSL "$WEIXIN_HOME_URL" || true)
+    if [ -n "$home_content" ]; then
+        DOWNLOAD_LINK=$(printf '%s' "$home_content" \
+            | grep -Eo 'https?://[^"]+/[^"]*WeChatMac[^"]*\.dmg([^"]*)?' \
+            | sed 's/&amp;/\&/g' \
+            | grep '/Universal/Mac/' \
+            | head -n 1 || true)
+
+        mac_page_url=$(printf '%s' "$home_content" \
+            | grep -Eo 'https?://mac\.weixin\.qq\.com/[^"]*' \
+            | sed 's/&amp;/\&/g' \
+            | head -n 1 || true)
+    fi
+
+    if [ -z "$mac_page_url" ]; then
+        mac_page_url="$DOWNLOAD_PAGE_URL"
+    fi
+
+    if [ -z "$DOWNLOAD_LINK" ]; then
+        page_content=$(curl -fsSL "$mac_page_url" || true)
+        DOWNLOAD_LINK=$(printf '%s' "$page_content" \
+            | grep -Eo 'https?://[^"]+/[^"]*WeChatMac[^"]*\.dmg([^"]*)?' \
+            | sed 's/&amp;/\&/g' \
+            | grep '/Universal/Mac/' \
+            | head -n 1 || true)
+    fi
+
+    if [ -z "$DOWNLOAD_LINK" ]; then
+        feed_content=$(curl -fsSL "$RELEASE_FEED_URL" || true)
+        DOWNLOAD_LINK=$(printf '%s' "$feed_content" \
+            | grep -Eo 'https?://[^"]+/[^"]*WeChatMac[^"]*\.dmg([^"]*)?' \
+            | sed 's/&amp;/\&/g' \
+            | grep '/Universal/Mac/' \
+            | head -n 1 || true)
+    fi
+
+    if [ -z "$DOWNLOAD_LINK" ]; then
+        echo_color "red" "Failed to resolve WeChat download link!"
+        clean_data 1
+    fi
+}
+
+# 下载 WeChat DMG
 download_wechat() {
-    DOWNLOAD_LINK="https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"
+    resolve_download_link
 
     print_separator
     echo_color "yellow" "Downloading the newest WeChatMac from $DOWNLOAD_LINK..."
