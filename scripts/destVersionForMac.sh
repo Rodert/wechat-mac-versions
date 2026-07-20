@@ -315,9 +315,9 @@ get_latest_release_info() {
         LATEST_VERSION=""
         LATEST_PACKAGE_SIGNATURE=""
     else
-        LATEST_SUM256=$(echo "$LATEST_BODY" | grep 'Sha256:' | awk -F': ' '{print $2}')
-        LATEST_VERSION=$(echo "$LATEST_BODY" | grep 'DestVersion:' | awk -F': ' '{print $2}')
-        LATEST_PACKAGE_SIGNATURE=$(echo "$LATEST_BODY" | grep 'PackageSignature:' | awk -F': ' '{print $2}')
+        LATEST_SUM256=$(printf '%s\n' "$LATEST_BODY" | awk -F': ' '/^Sha256:/ {print $2; exit}')
+        LATEST_VERSION=$(printf '%s\n' "$LATEST_BODY" | awk -F': ' '/^DestVersion:/ {print $2; exit}')
+        LATEST_PACKAGE_SIGNATURE=$(printf '%s\n' "$LATEST_BODY" | awk -F': ' '/^PackageSignature:/ {print $2; exit}')
     fi
 
     echo "Latest Version: $LATEST_VERSION"
