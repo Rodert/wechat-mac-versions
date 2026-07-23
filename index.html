@@ -583,7 +583,7 @@
 
         <div id="loading" class="loading">
             <div class="terminal-loader">Loading releases...</div>
-            <div class="loading-text">Fetching data from GitHub API</div>
+            <div class="loading-text">Loading release data</div>
         </div>
 
         <div id="error" class="error" style="display: none;"></div>
@@ -609,9 +609,7 @@
     </div>
 
     <script>
-        const REPO_OWNER = 'Rodert';
-        const REPO_NAME = 'wechat-mac-versions';
-        const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/releases`;
+        const RELEASES_URL = './releases.json';
 
         async function fetchReleases() {
             const loadingEl = document.getElementById('loading');
@@ -620,7 +618,7 @@
             const statsEl = document.getElementById('stats');
 
             try {
-                const response = await fetch(API_URL);
+                const response = await fetch(RELEASES_URL, { cache: 'no-store' });
                 
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);

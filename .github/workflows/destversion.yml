@@ -4,18 +4,44 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - releases.json
   schedule:
     - cron: '0 7 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   save_new_wechat:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       # - name: Test Github Action Server Time
       #   run: echo `date`
       - name: Check new version and push
         env: 
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: bash -x ./scripts/destVersionForMac.sh ${{ github.event.inputs.download_link }}
+      - name: Generate release cache
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const releases = await github.paginate(github.rest.repos.listReleases, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              per_page: 100,
+            });
+            fs.writeFileSync('releases.json', `${JSON.stringify(releases, null, 2)}\n`);
+      - name: Commit release cache
+        run: |
+          if git diff --quiet -- releases.json; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add releases.json
+          git commit -m 'chore: update release cache'
+          git push
