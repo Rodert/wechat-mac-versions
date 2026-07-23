@@ -535,24 +535,298 @@
         .footer-link:hover {
             color: var(--accent-green);
         }
+
+        /* Mac terminal interface */
+        :root {
+            --bg-primary: #080d0b;
+            --bg-secondary: #0e1914;
+            --bg-tertiary: #13231b;
+            --text-primary: #e6f4ea;
+            --text-secondary: #95a89d;
+            --accent-green: #7dff66;
+            --accent-blue: #74ebff;
+            --accent-purple: #d4a6ff;
+            --accent-orange: #ff7a70;
+            --border-color: #2e8c4c;
+            --glow-green: rgba(125, 255, 102, 0.2);
+            --glow-blue: rgba(116, 235, 255, 0.18);
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            line-height: 1.5;
+        }
+
+        body::before {
+            background: repeating-linear-gradient(0deg, transparent 0, transparent 3px, rgba(125, 255, 102, 0.025) 4px);
+        }
+
+        body::after {
+            display: none;
+        }
+
+        .container {
+            max-width: 1240px;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent-green);
+            border-radius: 0;
+            box-shadow: 0 0 24px var(--glow-green), inset 0 0 34px rgba(125, 255, 102, 0.025);
+            padding: 28px 20px 20px;
+            margin-bottom: 30px;
+        }
+
+        header::before { display: none; }
+
+        .terminal-header { display: none; }
+
+        .terminal-mark {
+            color: var(--accent-green);
+            font-size: 0.7rem;
+            font-weight: 700;
+            line-height: 1;
+            margin: 0 0 20px;
+            overflow: hidden;
+            text-shadow: 0 0 12px var(--glow-green);
+        }
+
+        h1 {
+            color: var(--accent-green);
+            background: none;
+            -webkit-text-fill-color: currentColor;
+            font-size: 2.25rem;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            text-shadow: 0 0 16px var(--glow-green);
+        }
+
+        .subtitle {
+            color: var(--accent-blue);
+            font-size: 0.95rem;
+            margin-bottom: 7px;
+        }
+
+        .identity-line {
+            color: var(--text-primary);
+            border-left: 3px solid var(--accent-yellow, #f7e877);
+            background: #142119;
+            font-size: 0.84rem;
+            margin: 16px 0 18px;
+            padding: 9px 12px;
+        }
+
+        .identity-line a,
+        .footer-link {
+            color: var(--accent-blue);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        .header-links {
+            gap: 18px;
+        }
+
+        .link-btn {
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid transparent;
+            border-radius: 0;
+            color: var(--text-primary);
+            padding: 2px 0;
+        }
+
+        .link-btn:hover {
+            background: transparent;
+            border-color: var(--accent-green);
+            box-shadow: none;
+            color: var(--accent-green);
+        }
+
+        .command-bar {
+            align-items: center;
+            background: #040705;
+            border: 1px solid var(--accent-green);
+            box-shadow: 0 0 16px var(--glow-green);
+            color: var(--accent-blue);
+            display: flex;
+            font-size: 0.88rem;
+            gap: 10px;
+            margin: 0 0 20px;
+            min-height: 70px;
+            padding: 14px 20px;
+        }
+
+        .command-prompt { color: var(--accent-green); font-weight: 700; }
+        .command-caret { color: var(--accent-green); margin-left: auto; }
+
+        .stats {
+            gap: 18px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: transparent;
+            border: 1px solid var(--accent-green);
+            border-radius: 0;
+            padding: 12px 14px;
+        }
+
+        .stat-card::before { display: none; }
+        .stat-label { color: var(--text-secondary); font-size: 0.72rem; }
+        .stat-value { color: var(--accent-green); font-size: 1.3rem; }
+
+        .loading, .empty-state, .error {
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent-green);
+            border-radius: 0;
+            box-shadow: 0 0 14px rgba(125, 255, 102, 0.08);
+        }
+
+        .loading { padding: 50px 20px; }
+        .loading-text { color: var(--accent-blue); margin-top: 10px; }
+        .error { border-color: var(--accent-orange); color: var(--accent-orange); }
+
+        .versions-container { gap: 20px; }
+
+        .version-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent-green);
+            border-left: 3px solid var(--accent-green);
+            border-radius: 0;
+        }
+
+        .version-card:hover {
+            border-color: var(--accent-green);
+            box-shadow: 0 0 20px var(--glow-green);
+        }
+
+        .version-header {
+            background: #0a120d;
+            border-bottom: 1px solid #265c36;
+            padding: 13px 16px;
+        }
+
+        .version-title { font-size: 1.08rem; }
+        .version-tag { color: var(--accent-blue); }
+        .version-date { color: var(--text-secondary); }
+
+        .badge {
+            background: transparent;
+            border: 1px solid var(--accent-green);
+            border-radius: 0;
+            color: var(--accent-green);
+            padding: 2px 7px;
+        }
+
+        .version-body { padding: 16px; }
+
+        .version-info {
+            background: transparent;
+            border: 0;
+            border-left: 2px solid #e8db69;
+            border-radius: 0;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            padding: 7px 10px;
+        }
+
+        .packages-section { margin-top: 12px; }
+        .packages-title { color: var(--text-primary); letter-spacing: 0; margin-bottom: 4px; }
+        .packages-grid { display: block; }
+
+        .package-card {
+            align-items: center;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            border-top: 1px solid #265c36;
+            display: grid;
+            gap: 12px;
+            grid-template-columns: minmax(0, 1fr) auto auto;
+            padding: 11px 0;
+            transform: none;
+        }
+
+        .package-card:hover {
+            background: rgba(125, 255, 102, 0.035);
+            border-color: #3eae5e;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .package-header { margin: 0; min-width: 0; }
+        .package-name { color: var(--text-primary); overflow-wrap: anywhere; }
+        .package-size { color: var(--text-secondary); margin-top: 2px; }
+
+        .package-type {
+            background: transparent;
+            border: 1px solid #8063a6;
+            border-radius: 0;
+            color: var(--accent-purple);
+            margin: 0;
+            padding: 2px 6px;
+        }
+
+        .package-download {
+            background: transparent;
+            border: 1px solid var(--accent-green);
+            border-radius: 0;
+            color: var(--accent-green);
+            display: inline-block;
+            font-size: 0.76rem;
+            padding: 6px 9px;
+            width: auto;
+        }
+
+        .package-download:hover {
+            background: var(--accent-green);
+            box-shadow: 0 0 12px var(--glow-green);
+            color: var(--bg-primary);
+        }
+
+        footer {
+            background: transparent;
+            border: 0;
+            border-top: 1px solid #265c36;
+            border-radius: 0;
+            margin-top: 44px;
+            padding: 20px 0;
+            text-align: left;
+        }
+
+        .footer-links { justify-content: flex-start; margin-top: 12px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 12px; }
+            header { padding: 22px 16px 18px; }
+            .terminal-mark { display: none; }
+            h1 { font-size: 1.8rem; }
+            .stats { gap: 8px; }
+            .stat-card { padding: 10px; }
+            .stat-value { font-size: 1rem; overflow-wrap: anywhere; }
+            .command-bar { font-size: 0.76rem; min-height: 56px; padding: 10px 12px; }
+            .package-card { gap: 8px; grid-template-columns: minmax(0, 1fr) auto; }
+            .package-type { grid-column: 1; justify-self: start; }
+            .package-download { grid-column: 2; grid-row: 1 / span 2; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="terminal-header">
-                <div class="terminal-dot dot-red"></div>
-                <div class="terminal-dot dot-yellow"></div>
-                <div class="terminal-dot dot-green"></div>
-                <span style="color: var(--text-secondary); margin-left: 10px;">wechat-mac-versions@latest</span>
-            </div>
+            <pre class="terminal-mark" aria-hidden="true">██╗    ██╗███████╗ ██████╗██╗  ██╗ █████╗ ████████╗
+██║    ██║██╔════╝██╔════╝██║  ██║██╔══██╗╚══██╔══╝
+██║ █╗ ██║█████╗  ██║     ███████║███████║   ██║
+██║███╗██║██╔══╝  ██║     ██╔══██║██╔══██║   ██║
+╚███╔███╔╝███████╗╚██████╗██║  ██║██║  ██║   ██║</pre>
             <h1>WeChat Mac Versions</h1>
-            <p class="subtitle">> 极客下载站 | 收集并保存所有 Mac 微信历史版本</p>
-            <p class="subtitle" style="margin-top: 10px; font-size: 0.85rem;">
-                > Author: <span style="color: var(--accent-green);">王仕宇</span> | 
-                <span style="color: var(--accent-blue);">JavaPub</span> | 
-                <span style="color: var(--accent-purple);">仕宇2046</span>
-            </p>
+            <p class="subtitle">微信 macOS 历史版本下载中心</p>
+            <div class="identity-line"><strong>Author:</strong> 王仕宇 (Wang Shiyu)<br><strong>Repository:</strong> <a href="https://github.com/Rodert/wechat-mac-versions" target="_blank">GitHub</a> | <a href="https://rodert.github.io/wechat-win-versions/" target="_blank">Windows Versions</a></div>
             <div class="header-links">
                 <a href="https://github.com/Rodert/wechat-mac-versions" class="link-btn" target="_blank">
                     GitHub Repository
@@ -565,6 +839,12 @@
                 </a>
             </div>
         </header>
+
+        <div class="command-bar" aria-label="Release cache status">
+            <span class="command-prompt">$</span>
+            <span>cat ./releases.json</span>
+            <span class="command-caret">&gt;_</span>
+        </div>
 
         <div id="stats" class="stats" style="display: none;">
             <div class="stat-card">
