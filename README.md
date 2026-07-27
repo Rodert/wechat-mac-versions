@@ -62,3 +62,9 @@
 各版本更新日志可参见官网 [changelog](https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_faq_list&head=true)
 
 *如有问题/侵权，请直接提交 issue 告知。*
+
+## 推荐站点
+
+- [Codex 中文网](https://codex-zh.com/)
+- [在线生图、在线生视频](https://app.codex-zh.com/)
+- [AICoding](https://chongplus.plus/)
