@@ -2,9 +2,12 @@
 
 <sub>语言 / Languages: [简体中文](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Español](README.es.md) · [Русский](README.ru.md) · [한국어](README.ko.md)</sub>
 
-- [点击下载 windows 微信历史版本](https://github.com/Rodert/wechat-win-versions)
+## 微信历史版本仓库
 
-- [点击下载 mac 微信历史版本](https://github.com/Rodert/wechat-mac-versions)
+- [Android 微信历史版本](https://github.com/Rodert/wechat-android-versions)
+- [Windows 微信历史版本](https://github.com/Rodert/wechat-win-versions)
+- [macOS 微信历史版本](https://github.com/Rodert/wechat-mac-versions)
+- [Linux 微信历史版本](https://github.com/Rodert/wechat-linux-versions)
 
 - [QQ历史版本](https://github.com/Rodert/qq-versions)
 
