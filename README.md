@@ -68,6 +68,7 @@
 
 ## 推荐站点
 
+- [GPT充值](https://shop.chongplus.plus/)
 - [Codex 中文网](https://codex-zh.com/)
 - [在线生图、在线生视频](https://app.codex-zh.com/)
 - [AICoding](https://chongplus.plus/)
