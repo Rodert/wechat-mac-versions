@@ -72,3 +72,5 @@
 - [Codex 中文网](https://codex-zh.com/)
 - [在线生图、在线生视频](https://app.codex-zh.com/)
 - [AICoding](https://chongplus.plus/)
+- [科学上网工具](https://tinyurl.com/network-saku)
+
