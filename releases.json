@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 2904,
         "digest": "sha256:08816501b713481c4f8367c68da02396a7d414376f111454e3480ecda56096de",
-        "download_count": 0,
+        "download_count": 2,
         "created_at": "2026-10-30T13:54:47Z",
         "updated_at": "2026-10-30T13:54:48Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.2.0_20261030/WeChat-4.2.0.sha256"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 299297288,
         "digest": "sha256:0307b79dd2565fb0bac3add2edee10ceb2a3c2071200e66b884e19c4cd48ff48",
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2026-10-30T13:54:41Z",
         "updated_at": "2026-10-30T13:54:53Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.2.0_20261030/WeChatLinux_arm64.AppImage"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 211858460,
         "digest": "sha256:374732eda88a6f3a7e4eb315e64e5fac73ef17923d504d242964f19ed1b80c75",
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2026-10-30T13:54:37Z",
         "updated_at": "2026-10-30T13:54:47Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.2.0_20261030/WeChatLinux_arm64.deb"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 215061464,
         "digest": "sha256:ec580793cced556aadc236e8935750ce1489ba8f796092ba39d3d1822309cdc2",
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2026-10-30T13:54:42Z",
         "updated_at": "2026-10-30T13:54:51Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.2.0_20261030/WeChatLinux_LoongArch.deb"
@@ -248,7 +248,7 @@
         "state": "uploaded",
         "size": 310647288,
         "digest": "sha256:4526180bca980128791599af122ff4795002a5715a510f6a65480e2be6874244",
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2026-10-30T13:54:29Z",
         "updated_at": "2026-10-30T13:54:40Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.2.0_20261030/WeChatLinux_x86_64.AppImage"
@@ -284,7 +284,7 @@
         "state": "uploaded",
         "size": 231861976,
         "digest": "sha256:a0db8caeee8d1e6cfe0aa5ce58710270f8d74a90ff4920f53a3fc22aa0956fe9",
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2026-10-30T13:54:28Z",
         "updated_at": "2026-10-30T13:54:39Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.2.0_20261030/WeChatLinux_x86_64.deb"
@@ -356,7 +356,7 @@
         "state": "uploaded",
         "size": 544189357,
         "digest": "sha256:413f2425dfb388c73ed74a172301daac6ceba17ec53e59789f0b870723744b66",
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2026-10-30T13:54:10Z",
         "updated_at": "2026-10-30T13:54:49Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.2.0_20261030/WeChatMac-4.2.0.dmg"
@@ -392,7 +392,7 @@
         "state": "uploaded",
         "size": 259961968,
         "digest": "sha256:86d16fe03416126b262fde7e14199e20f074b938e295fde0e0a3e0d7c2f7da69",
-        "download_count": 0,
+        "download_count": 3,
         "created_at": "2026-10-30T13:54:10Z",
         "updated_at": "2026-10-30T13:54:28Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.2.0_20261030/WeChatWin_4.2.0.exe"
@@ -2544,7 +2544,7 @@
         "state": "uploaded",
         "size": 532016523,
         "digest": "sha256:ceea355d5c93419658f777fdd1010f9b19d14fab6dc552af9c208cddad7f248f",
-        "download_count": 52,
+        "download_count": 53,
         "created_at": "2026-10-19T14:25:14Z",
         "updated_at": "2026-10-19T14:26:00Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.1.15_20261019/WeChatMac-4.1.15.dmg"
@@ -4732,7 +4732,7 @@
         "state": "uploaded",
         "size": 530673215,
         "digest": "sha256:d87de447a43cd2d59aef441d3a8b32aad255427289581afcffc90aee0735dfc2",
-        "download_count": 59,
+        "download_count": 60,
         "created_at": "2026-10-01T14:18:34Z",
         "updated_at": "2026-10-01T14:19:06Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.1.15_20261001/WeChatMac-4.1.15.dmg"
@@ -18954,7 +18954,7 @@
         "state": "uploaded",
         "size": 494301407,
         "digest": "sha256:f17c4304c9043f2c59ff2c033bc3c84cd5bf9ff2e5252c424ba939e70cdd552c",
-        "download_count": 194,
+        "download_count": 195,
         "created_at": "2026-07-20T13:45:01Z",
         "updated_at": "2026-07-20T13:45:28Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.1.11/WeChatMac-4.1.11.dmg"
@@ -20386,7 +20386,7 @@
         "state": "uploaded",
         "size": 370574676,
         "digest": "sha256:10fe0e2e76cd513f2123cddfacaa68c39ffd6f305e5f6d746e6dc3ba6eaabf84",
-        "download_count": 3808,
+        "download_count": 3823,
         "created_at": "2026-03-20T07:47:18Z",
         "updated_at": "2026-03-20T07:47:31Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v3.8.10.17/WeChatMac-3.8.10.17.dmg"
@@ -20477,7 +20477,7 @@
         "state": "uploaded",
         "size": 478637603,
         "digest": "sha256:b706fa8aea0176f8a26925ef06f9b8a6f0751cf71b521eec6e47d63a631432f3",
-        "download_count": 695,
+        "download_count": 697,
         "created_at": "2026-02-27T07:48:30Z",
         "updated_at": "2026-02-27T07:48:46Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.1.7_20260227/WeChatMac-4.1.7.dmg"
@@ -20635,7 +20635,7 @@
         "state": "uploaded",
         "size": 478735647,
         "digest": "sha256:fd06c8909f3710509405b98552763c6816e33cff41e72c3caa645b857c52c181",
-        "download_count": 374,
+        "download_count": 376,
         "created_at": "2026-01-29T07:41:31Z",
         "updated_at": "2026-01-29T07:41:45Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.1.7/WeChatMac-4.1.7.dmg"
@@ -20793,7 +20793,7 @@
         "state": "uploaded",
         "size": 443367008,
         "digest": "sha256:862aba2f9d70d13a10ae60742eadc7adc31dc2b3e9548cbe78f30ff3df4945f8",
-        "download_count": 297,
+        "download_count": 298,
         "created_at": "2025-12-05T07:22:48Z",
         "updated_at": "2025-12-05T07:23:04Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.1.5_20251205/WeChatMac-4.1.5.dmg"
@@ -21030,7 +21030,7 @@
         "state": "uploaded",
         "size": 428620717,
         "digest": "sha256:85f42e65cc7221359f9d3b95a239f5ea946e99c9840e51104f637fad345d3516",
-        "download_count": 291,
+        "download_count": 292,
         "created_at": "2025-10-31T07:20:39Z",
         "updated_at": "2025-10-31T07:20:59Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.1.2_20251031/WeChatMac-4.1.2.dmg"
@@ -21978,7 +21978,7 @@
         "state": "uploaded",
         "size": 390008752,
         "digest": "sha256:bdd79450975b2314fcb57e57a3d408cdb593c118ed497c2b368226330b79c646",
-        "download_count": 460,
+        "download_count": 465,
         "created_at": "2025-07-23T07:25:45Z",
         "updated_at": "2025-07-23T07:25:59Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.0.6_20250723/WeChatMac-4.0.6.dmg"
@@ -22057,7 +22057,7 @@
         "state": "uploaded",
         "size": 389873828,
         "digest": "sha256:1e5a06fbe0c6cecc4cec2d006cde0f5e493315d8548410dc1f956af9b4d4b841",
-        "download_count": 1738,
+        "download_count": 1744,
         "created_at": "2025-07-19T04:46:51Z",
         "updated_at": "2025-07-19T04:47:05Z",
         "browser_download_url": "https://github.com/Rodert/wechat-mac-versions/releases/download/v4.0.6/WeChatMac-4.0.6.dmg"
